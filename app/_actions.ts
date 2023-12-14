@@ -8,7 +8,7 @@ export async function createTodoAction(title: string) {
   revalidatePath('/')
 }
 
-export async function updateTodoAction(id: string, isCompleted: boolean) {
+export async function updateTodoAction(id: any, isCompleted: boolean) {
   await updateTodo(id, isCompleted)
   revalidatePath('/')
 }

@@ -18,7 +18,7 @@ export async function createTodo(title: string) {
   }
 }
 
-export async function getTodoById(id: string) {
+export async function getTodoById(id: any) {
   try {
     const todo = await prisma.todo.findUnique({ where: { id } })
     return { todo }
@@ -27,7 +27,7 @@ export async function getTodoById(id: string) {
   }
 }
 
-export async function updateTodo(id: string, isCompleted: boolean) {
+export async function updateTodo(id: any, isCompleted: boolean) {
   try {
     const todo = await prisma.todo.update({
       where: { id },
