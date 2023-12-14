@@ -15,7 +15,6 @@ const TodoItem = ({ todo }: TodoItemProps) => {
   return (
     <li className='flex items-center gap-3'>
       <input
-        id={todo.id}
         type='checkbox'
         defaultChecked={todo.isCompleted}
         onChange={e =>
